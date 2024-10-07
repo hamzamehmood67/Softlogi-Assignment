@@ -17,9 +17,28 @@ namespace BackendAssignment.Controllers
 
         // GET: api/Products
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
+        public async Task<ActionResult<IEnumerable<ProductDTO>>> GetProducts()
         {
-            return await _context.Products.ToListAsync();
+            var products= await _context.Products.ToListAsync();
+            List<ProductDTO> result= new List<ProductDTO>();
+            foreach(var product in products)
+            {
+
+                List<int> cat = _context.ProductCategories.Where(pc => pc.ProductID == product.ProductID).Select(pc => pc.CategoryID).ToList();
+                var dto = new ProductDTO
+                {
+                    ProductID = product.ProductID,
+                    ProductName = product.ProductName,
+                    Price = product.Price,
+                    Tags = product.Tags,
+                    Quantity = product.Quantity,
+                    categories = cat
+                };
+                result.Add(dto);
+            }
+
+            return Ok(result);
+
         }
 
         // POST: api/Products
