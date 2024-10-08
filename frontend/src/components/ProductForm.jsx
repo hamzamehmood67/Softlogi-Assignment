@@ -47,7 +47,6 @@ function ProductForm({ method, product }) {
     const cancelHandler = () => {
         navigate('..'); // Navigate back to the previous page
     };
-    console.log(selectedCategories);
     return (
         <Form method={method} className={classes.form}>
             {data && data.errors && (
@@ -115,6 +114,14 @@ function ProductForm({ method, product }) {
                     ))}
                 </div>
             </div>
+            {selectedCategories.map((categoryId) => (
+                <input
+                    key={categoryId}
+                    type="hidden"
+                    name="categories"
+                    value={categoryId}
+                />
+            ))}
             <div className={classes.actions}>
                 <button className={classes.cancel} type="button" onClick={cancelHandler} disabled={isSubmitting}>
                     Cancel

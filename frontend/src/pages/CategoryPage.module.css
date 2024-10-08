@@ -1,0 +1,53 @@
+.pageContainer {
+    max-width: 800px;
+    margin: 0 auto; /* Center the page */
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.pageHeader {
+    font-size: 2rem;
+    color: #333; /* Dark text */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.categoryList {
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+    .categoryList li {
+        margin-bottom: 10px;
+    }
+
+.noCategoriesMessage {
+    font-size: 1.2rem;
+    color: #666;
+    text-align: center;
+}
+
+.addCategoryButton {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    color: white;
+    background-color: #3498db; /* Blue background */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+
+    .addCategoryButton:hover {
+        background-color: #0056b3; /* Darker blue on hover */
+    }
+
+    .addCategoryButton:active {
+        background-color: #00408d; /* Even darker blue on click */
+    }

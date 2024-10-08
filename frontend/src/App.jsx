@@ -5,6 +5,8 @@ import AddProduct from "./pages/AddProduct"
 import ProductDetail, { loader as productLoader } from "./components/ProductDetail";
 import EditProduct from "./pages/EditProduct";
 import { action as manipulateProduct } from "./components/ProductForm";
+import CategoryPage from "./pages/CategoryPage";
+import AddCategory from "./pages/AddCategory"
 const routes = createBrowserRouter([
     {
         path: '/',
@@ -35,6 +37,15 @@ const routes = createBrowserRouter([
                 path: '/addproduct',
                 element: <AddProduct />,
                 action: manipulateProduct
+            },
+            {
+                path: '/categories',
+                element: <CategoryPage />,
+               
+            },
+            {
+                path: '/categories/new',  // This will display the AddCategory component
+                element: <AddCategory />
             }
         ]
     }

@@ -1,0 +1,32 @@
+.categoryItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+.deleteButton {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    .deleteButton:hover {
+        background-color: #c82333;
+    }
+
+
+    .categoryItem:hover {
+        background-color: #e9ecef; /* Slightly darker background on hover */
+    }
+
+    .categoryItem:active {
+        background-color: #dee2e6; /* Even darker background when clicked */
+    }
