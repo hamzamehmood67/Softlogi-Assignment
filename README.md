@@ -8,6 +8,7 @@ This project is a web application developed using ASP.NET Core and SQL Server fo
 - **Category Management**: Manage categories for organizing products.
 - **Tag Management**: Add and manage tags for products to improve searchability.
 - **API Endpoints**: RESTful API endpoints for seamless interaction with the frontend.
+-  **Search Functionality**: Search products by name and tags.
 
 ## Technologies Used
 
