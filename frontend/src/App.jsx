@@ -1,35 +1,48 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Home from "./pages/Home";
+import Root from "./components/Root"
+import AddProduct from "./pages/AddProduct"
+import ProductDetail, { loader as productLoader } from "./components/ProductDetail";
+import EditProduct from "./pages/EditProduct";
+import { action as manipulateProduct } from "./components/ProductForm";
+const routes = createBrowserRouter([
+    {
+        path: '/',
+        element: <Root />,
+        children: [
+            {
+                path: '/',
+                element: <Home />
+            },
+            {
+                path: '/product/:id',
+                id: 'product-detail',
+                loader: productLoader,
+                children: [
+                    {
+                        index: true, // Directly define the product detail route
+                        element: <ProductDetail />,
+
+                    },
+                    {
+                        path: 'edit',
+                        element: <EditProduct />,
+                        action: manipulateProduct
+                    }
+                ]
+            },
+            {
+                path: '/addproduct',
+                element: <AddProduct />,
+                action: manipulateProduct
+            }
+        ]
+    }
+]);
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    return <div><RouterProvider router={routes}></RouterProvider></div>
 }
 
 export default App
+

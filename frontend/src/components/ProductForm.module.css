@@ -1,0 +1,86 @@
+
+
+.form {
+    max-width: 500px; /* Set a maximum width for the form */
+    margin: 20px auto; /* Center the form horizontally */
+    padding: 20px; /* Add some padding around the form */
+    border: 1px solid #ccc; /* Add a border to the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for a 3D effect */
+    background-color: #f9f9f9; /* Light background color */
+}
+
+    .form p {
+        margin-bottom: 15px; /* Space between input fields */
+    }
+
+    .form label {
+        display: block; /* Make labels block elements */
+        font-weight: bold; /* Make labels bold */
+        margin-bottom: 5px; /* Space between label and input */
+    }
+
+    .form input,
+    .form textarea {
+        width: 100%; /* Make input fields full width */
+        padding: 10px; /* Padding inside input fields */
+        border: 1px solid #ccc; /* Border for input fields */
+        border-radius: 4px; /* Rounded corners for input fields */
+        font-size: 14px; /* Font size for input fields */
+    }
+
+    .form textarea {
+        resize: vertical; /* Allow vertical resizing of textarea */
+    }
+
+.actions {
+    display: flex; /* Use flexbox for buttons */
+    justify-content: space-between; /* Space between buttons */
+}
+
+    .actions button {
+        padding: 10px 15px; /* Padding for buttons */
+        border: none; /* Remove border */
+        border-radius: 4px; /* Rounded corners for buttons */
+        cursor: pointer; /* Show pointer on hover */
+        font-size: 14px; /* Font size for buttons */
+    }
+
+        
+
+        .actions button:disabled {
+            background-color: #e0e0e0; /* Light background for disabled buttons */
+            cursor: not-allowed; /* Change cursor for disabled buttons */
+        }
+
+.checkboxGroup {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.checkboxItem {
+    display: flex;
+    align-items: center;
+}
+
+    .checkboxItem input {
+        margin-right: 0.5rem;
+    }
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.cancel {
+    background-color: #e74c3c;
+    color: white;
+}
+.save {
+    background-color: #3498db;
+    color: white;
+}
+   
+
+   

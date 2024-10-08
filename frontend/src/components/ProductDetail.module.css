@@ -1,0 +1,87 @@
+.productDetailCard {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+    .productDetailCard:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+.productName {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center;
+}
+
+.productID, .productPrice, .productQuantity, .productTags {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.categories {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.categoryBadge {
+    display: inline-block;
+    padding: 4px 8px;
+    background-color: #f1f1f1;
+    border-radius: 4px;
+    margin-right: 5px;
+    font-size: 14px;
+}
+
+
+.buttonContainer {
+    margin-top: 20px; /* Space above buttons */
+    text-align: center;
+}
+
+.deleteButton,
+.editButton {
+    padding: 10px 15px; /* Padding around the button text */
+    margin-right: 10px; /* Space between buttons */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    font-size: 14px; /* Font size for button text */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.deleteButton {
+    background-color: #e74c3c; /* Red color for delete button */
+    color: white; /* White text color */
+}
+
+.editButton {
+    background-color: #3498db; /* Blue color for edit button */
+    color: white; /* White text color */
+}
+
+/* Hover effects */
+.deleteButton:hover {
+    background-color: #c0392b; /* Darker red when hovered */
+}
+
+.editButton:hover {
+    background-color: #2980b9; /* Darker blue when hovered */
+}
+
+/* Optional: Active state */
+.deleteButton:active {
+    background-color: #a93226; /* Even darker red when pressed */
+}
+
+.editButton:active {
+    background-color: #1f598b; /* Even darker blue when pressed */
+}

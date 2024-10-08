@@ -76,13 +76,22 @@ namespace BackendAssignment.Controllers
         public async Task<ActionResult<Product>> GetProduct(int id)
         {
             var product = await _context.Products.FirstOrDefaultAsync(p => p.ProductID == id);
-
+           
             if (product == null)
             {
                 return NotFound(new { message = $"Product with ID {id} not found." });
             }
-
-            return Ok(product);
+            List<int> cat = _context.ProductCategories.Where(pc => pc.ProductID == id).Select(pc => pc.CategoryID).ToList();
+            var dto = new ProductDTO
+            {
+                ProductID = product.ProductID,
+                ProductName = product.ProductName,
+                Price = product.Price,
+                Tags = product.Tags,
+                Quantity = product.Quantity,
+                categories = cat
+            };
+            return Ok(dto);
         }
 
         // PUT: api/Products/5
