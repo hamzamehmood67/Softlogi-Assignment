@@ -1,4 +1,4 @@
-#Online Store
+## Online Store
 
 This project is a web application developed using ASP.NET Core and SQL Server for the backend, and React for the frontend. It focuses on providing a robust backend for managing products, categories, and tags. The application supports CRUD operations and is designed to be scalable and efficient.
 
