@@ -1,0 +1,64 @@
+.home {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    background-color: #ffffff; /* White background for contrast */
+    border-radius: 12px; /* More rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center items */
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2rem; /* Larger font size */
+    margin-bottom: 1rem; /* Space below heading */
+}
+
+.inputContainer {
+    width: 100%;
+    max-width: 400px; /* Limit input width */
+    margin-bottom: 1rem; /* Space below input */
+}
+
+.input {
+    padding: 12px; /* Increased padding for comfort */
+    font-size: 16px; /* Readable font size */
+    border: 1px solid #ccc;
+    border-radius: 8px; /* More rounded corners */
+    width: 100%; /* Full width */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+    .input:focus {
+        border-color: #007bff; /* Change border color on focus */
+        outline: none; /* Remove outline */
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add shadow on focus */
+    }
+
+.productList {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    width: 100%; /* Full width for the list */
+}
+
+.productCard {
+    border: 1px solid #ccc;
+    border-radius: 8px; /* More rounded corners */
+    margin: 10px 0; /* Space between cards */
+    padding: 15px; /* Increased padding */
+    background-color: #f9f9f9; /* Slightly different background for cards */
+    transition: box-shadow 0.3s ease; /* Smooth shadow transition */
+    max-width: 200px;
+}
+
+    .productCard:hover {
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Shadow effect on hover */
+    }
+
+.noProducts {
+    text-align: center; /* Center the text */
+    color: #666; /* Lighter color for no products message */
+}
